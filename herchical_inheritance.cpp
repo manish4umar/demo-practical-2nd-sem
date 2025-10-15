@@ -9,20 +9,21 @@ class name{
 
 };
 
-class roll_no{
+class roll_no : public name{
     public:
     int roll_no= 19;
 };
 
-class student : public name , public roll_no{
+class student : public name {
     public:
     string branch="Bca";
 };
 
 int main(){
     student s;
+    roll_no r;
     cout<<"Name = "<<s.name<<endl ;
-    cout<<"roll no = "<<s.roll_no<< endl ;
+    cout<<"roll no = "<<r.roll_no<< endl ;
     cout<<"branch = "<<s.branch;
     return 0;
 }
