@@ -3,19 +3,29 @@ using namespace std;
 
 class Car {
 public:
-    string brand;
-    int speed;
 
-    void display() {
-        cout << "Brand: " << brand<< endl << "Speed: " << speed <<  " km/h" << endl;
-    }
+int a;
+float b;
+double c;
+
+
+    
 };
 
-int main() {
-    Car c1;
-    c1.brand = "BMW";
-    c1.speed = 180;
-    c1.display();
+int main(){
+    Car c;
+    cout<<"Enter First no= ";
+    cin>> c.a;
+
+    cout<<"Enter Second no= ";
+    cin>> c.b;
+
+    cout<<"Enter Third no= ";
+    cin>> c.c;
+
+    cout<<"Sum of a , b , c ="<< c.a+c.b+c.c;
 
     return 0;
+
+
 }
