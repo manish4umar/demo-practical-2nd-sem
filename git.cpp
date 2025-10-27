@@ -1,31 +1,35 @@
 #include <iostream>
 using namespace std;
 
-class Car {
+class Complex
+{
+    int real, imag;
+
 public:
+    Complex(int r = 0, int i = 0)
+    {
+        real = r;
+        imag = i;
+    }
 
-int a;
-float b;
-double c;
-
-
-    
+    Complex operator+(Complex const & obj)
+    {
+        return Complex(real + obj.real, imag + obj.imag );
+    }
+    void display()
+    {
+        cout << real << " + " << imag << "i" << endl;
+    }
 };
 
-int main(){
-    Car c;
-    cout<<"Enter First no= ";
-    cin>> c.a;
+int main()
+{
 
-    cout<<"Enter Second no= ";
-    cin>> c.b;
+    Complex c;
 
-    cout<<"Enter Third no= ";
-    cin>> c.c;
-
-    cout<<"Sum of a , b , c ="<< c.a+c.b+c.c;
-
+    Complex c1(2, 3), c2(4, 5);
+    Complex c3 = c1 + c2;
+    cout << "Sum of two complex numbers: ";
+    c3.display();
     return 0;
-
-
 }
