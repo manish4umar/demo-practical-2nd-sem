@@ -65,7 +65,7 @@ int main()
     t.perimeter();
 
     rectangle r;
-    r.area(9 ,3);
+    r.area(7 , 9);
     r.perimeter();
 
     return 0;
